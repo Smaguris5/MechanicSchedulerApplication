@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_time">
+
+    <fragment
+        android:id="@+id/nav_calendar"
+        android:name="com.ar1246.mechanicschedulerapplication.ui.calendar.CalendarFragment"
+        android:label="@string/menu_calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/nav_time"
+        android:name="com.ar1246.mechanicschedulerapplication.ui.time.TimeFragment"
+        android:label="@string/menu_time"
+        tools:layout="@layout/fragment_time" />
+    <fragment
+        android:id="@+id/nav_statements"
+        android:name="com.ar1246.mechanicschedulerapplication.ui.statements.StatementsFragment"
+        android:label="@string/menu_statements"
+        tools:layout="@layout/fragment_statements" />
+    <fragment
+        android:id="@+id/nav_reminders"
+        android:name="com.ar1246.mechanicschedulerapplication.ui.reminders.RemindersFragment"
+        android:label="@string/menu_reminders"
+        tools:layout="@layout/fragment_reminders" />
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.ar1246.mechanicschedulerapplication.ui.notes.NotesFragment"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_notes" >
+        <action
+            android:id="@+id/action_nav_notes_to_addNote"
+            app:destination="@id/nav_addNote" />
+        <action
+            android:id="@+id/action_nav_notes_to_updateNoteFragment"
+            app:destination="@id/updateNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contacts"
+        android:name="com.ar1246.mechanicschedulerapplication.ui.contacts.ContactsFragment"
+        android:label="@string/menu_contacts"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.ar1246.mechanicschedulerapplication.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/nav_addNote"
+        android:name="com.ar1246.mechanicschedulerapplication.ui.noteAdd.AddNoteFragment"
+        android:label="Add Note"
+        tools:layout="@layout/fragment_add_note" >
+        <action
+            android:id="@+id/action_addNote_to_nav_notes"
+            app:destination="@id/nav_notes" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateNoteFragment"
+        android:name="com.ar1246.mechanicschedulerapplication.ui.noteUpdate.UpdateNoteFragment"
+        android:label="Update Note"
+        tools:layout="@layout/fragment_update_note" >
+        <action
+            android:id="@+id/action_updateNoteFragment_to_nav_notes"
+            app:destination="@id/nav_notes" />
+        <argument
+            android:name="currentUser"
+            app:argType="com.ar1246.mechanicschedulerapplication.data.db.NoteEntity" />
+    </fragment>
+</navigation>

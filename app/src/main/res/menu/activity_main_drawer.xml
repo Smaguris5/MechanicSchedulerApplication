@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_time"
+            android:icon="@drawable/ic_menu_time"
+            android:title="@string/menu_time" />
+        <item
+            android:id="@+id/nav_statements"
+            android:icon="@drawable/ic_menu_statements"
+            android:title="@string/menu_statements" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_menu_calendar"
+            android:title="@string/menu_calendar" />
+        <item
+            android:id="@+id/nav_reminders"
+            android:icon="@drawable/ic_menu_reminders"
+            android:title="@string/menu_reminders" />
+        <item
+            android:id="@+id/nav_notes"
+            android:icon="@drawable/ic_menu_notes"
+            android:title="@string/menu_notes" />
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/ic_menu_contacts"
+            android:title="@string/menu_contacts" />
+    </group>
+</menu>
